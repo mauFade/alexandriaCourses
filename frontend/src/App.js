@@ -1,10 +1,12 @@
-import './App.css';
+import React, { Fragment } from "react";
+import Paths from "./routes";
+import './global.css'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <Fragment>
+      <Paths />
+    </Fragment>
   );
 }
 
