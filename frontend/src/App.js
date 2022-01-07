@@ -1,12 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Paths from "./routes";
 import './global.css'
 
 function App() {
   return (
-    <Fragment>
-      <Paths />
-    </Fragment>
+     <Paths />
   );
 }
 
