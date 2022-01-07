@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import './style.css';
 import logoImg from '../../assets/logo.svg';
@@ -12,8 +12,7 @@ const Register = () => {
     const [city, setCity] = useState('');
     const [uf, setUf] = useState('');
 
-    const navigate = useNavigate();
-
+    const history = useHistory();
 
     async function handleRegister(e) {
         e.preventDefault();
@@ -27,15 +26,15 @@ const Register = () => {
         };
 
         try {
-            const response = await api.post('/ongs', data);
+          const response = await api.post('ongs', data);
 
-            alert (`ID: ${response.data.name}`);
+          alert(`ID: ${response.data.id}`);
 
-            navigate('/');
+          history.push('/');
         } catch (err) {
-            alert('Erro');
+          alert('Erro no cadastro, tente novamente.');
         }
-    }
+  }
 
     return (
         <div className='register-container'>
