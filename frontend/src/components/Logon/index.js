@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import heroesImg from '../../assets/heroes.png';
 import logoImg from '../../assets/logo.svg';
 import { FiLogIn } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
+import api from '../../services/api';
 
 const Logon = () => {
   const [id, setId] = useState('');

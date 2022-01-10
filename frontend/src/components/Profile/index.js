@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import './style.css';
 import logoImg from '../../assets/logo.svg';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
 const Profile = () => {
